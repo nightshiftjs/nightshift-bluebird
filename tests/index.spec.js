@@ -1,6 +1,6 @@
 'use strict';
 
-describe('The support for bluebird promises', function () {
+describe('The promise utilities', function () {
 
     var Promise = require('bluebird');
     var nightShift = require('nightshift-core');
