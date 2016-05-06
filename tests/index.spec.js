@@ -54,7 +54,7 @@ describe('The promise utilities', function () {
             .then(done);
     });
 
-    it('should give access to the bluebird romise constructor', function () {
+    it('should give access to the bluebird promise constructor', function () {
         expect(nightShift.promises.Promise).toBe(Promise);
     });
 });
