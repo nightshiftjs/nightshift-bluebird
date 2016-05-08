@@ -8,6 +8,16 @@
 
 This [NightShift](https://github.com/nightshiftjs) plugin replaces native ES6 promises by [bluebird](https://github.com/petkaantonov/bluebird) promises.
 
+## Setup
+Bluebird promises can be added to NightShift as a plugin.
+
+```javascript
+var nightShift = require('nightshift-core');
+var bluebird = require('nightshift-bluebird');
+
+nightShift.plugin(bluebird);
+```
+
 ## Working with Promises
 NightShift encourages the usage of promises instead of callback functions. 
 
@@ -34,4 +44,20 @@ var deferred = nightShift.promises.defer();
 var promise = deferred.promise;
 
 // use deferred.resolve(...) or deferred.reject(...) to change the state of the promise
+```
+
+## Contribute
+The tests can be executed by running the command below.
+```
+npm install && npm test
+```
+
+The test coverage can be checked by running the command below. It executes the tests and it generates a coverage report in _build/coverage/index.html_.
+```
+npm install && npm build-coverage
+```
+
+The quality of the code can be checked by running the command below. It detects potential problems in the code with JSHint, it executes the tests and it generates a coverage report. 
+```
+npm install && npm build
 ```
